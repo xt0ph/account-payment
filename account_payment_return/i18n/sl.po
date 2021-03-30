@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: account-payment (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 05:05+0000\n"
-"PO-Revision-Date: 2016-05-07 07:09+0000\n"
-"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"PO-Revision-Date: 2020-08-11 15:00+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-account-"
 "payment-8-0/language/sl/)\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: account_payment_return
 #: model:ir.model.fields,field_description:account_payment_return.field_payment_return__message_needaction
@@ -38,7 +39,7 @@ msgid "Additional information on return reason."
 msgstr ""
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:283
+#: code:addons/account_payment_return/models/payment_return.py:333
 #, python-format
 msgid "All payments must be owned by the same partner"
 msgstr ""
@@ -51,6 +52,11 @@ msgstr "Znesek"
 #. module: account_payment_return
 #: model:ir.model.fields,field_description:account_payment_return.field_payment_return__message_attachment_count
 msgid "Attachment Count"
+msgstr ""
+
+#. module: account_payment_return
+#: model:ir.model.fields,field_description:account_payment_return.field_payment_return__auto_reconcile_failure
+msgid "Automatic reconciliation failure"
 msgstr ""
 
 #. module: account_payment_return
@@ -131,21 +137,25 @@ msgid "Customer Payment Returns"
 msgstr "Vračila plačil kupcem"
 
 #. module: account_payment_return
+#: model:ir.model.fields,field_description:account_payment_return.field_account_bank_statement_import_journal_creation__default_expense_account_id
 #: model:ir.model.fields,field_description:account_payment_return.field_account_journal__default_expense_account_id
 msgid "Default Charges Account"
 msgstr ""
 
 #. module: account_payment_return
+#: model:ir.model.fields,field_description:account_payment_return.field_account_bank_statement_import_journal_creation__default_expense_partner_id
 #: model:ir.model.fields,field_description:account_payment_return.field_account_journal__default_expense_partner_id
 msgid "Default Charges Partner"
 msgstr ""
 
 #. module: account_payment_return
+#: model:ir.model.fields,help:account_payment_return.field_account_bank_statement_import_journal_creation__default_expense_account_id
 #: model:ir.model.fields,help:account_payment_return.field_account_journal__default_expense_account_id
 msgid "Default account for bank charges"
 msgstr ""
 
 #. module: account_payment_return
+#: model:ir.model.fields,help:account_payment_return.field_account_bank_statement_import_journal_creation__default_expense_partner_id
 #: model:ir.model.fields,help:account_payment_return.field_account_journal__default_expense_partner_id
 msgid "Default partner for charge expenses"
 msgstr ""
@@ -169,6 +179,15 @@ msgid "Draft"
 msgstr "Osnutek"
 
 #. module: account_payment_return
+#: model:ir.model.fields,help:account_payment_return.field_account_bank_statement_import_journal_creation__return_auto_reconcile
+#: model:ir.model.fields,help:account_payment_return.field_account_journal__return_auto_reconcile
+msgid ""
+"Enable automatic payment return reconciliation. This option is meant to be "
+"used only when working when transfer accounts, not if working directly with "
+"bank accounts."
+msgstr ""
+
+#. module: account_payment_return
 #: model:ir.model.fields,field_description:account_payment_return.field_payment_return__message_follower_ids
 msgid "Followers"
 msgstr "Sledilci"
@@ -188,7 +207,7 @@ msgstr "Sledilci"
 #. module: account_payment_return
 #: model_terms:ir.ui.view,arch_db:account_payment_return.payment_return_search_view
 msgid "Group By"
-msgstr ""
+msgstr "Združi po"
 
 #. module: account_payment_return
 #: model:ir.model.fields,field_description:account_payment_return.field_payment_return__id
@@ -230,7 +249,7 @@ msgid "Invoice has been included on a payment that has been returned later."
 msgstr "Račun je bil vključen v plačilo, ki je bilo kasneje vrnjeno."
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:310
+#: code:addons/account_payment_return/models/payment_return.py:360
 #, python-format
 msgid "Invoice: %s"
 msgstr "Račun: %s"
@@ -256,7 +275,7 @@ msgstr "Bančni dnevnik"
 #. module: account_payment_return
 #: model:ir.model,name:account_payment_return.model_account_move_line
 msgid "Journal Item"
-msgstr ""
+msgstr "Dnevniška postavka"
 
 #. module: account_payment_return
 #: model:ir.model.fields,field_description:account_payment_return.field_payment_return____last_update
@@ -280,7 +299,7 @@ msgid "Last Updated on"
 msgstr "Zadnjič posodobljeno"
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/account_invoice.py:39
+#: code:addons/account_payment_return/models/account_invoice.py:45
 #, python-format
 msgid "Less Payment"
 msgstr ""
@@ -317,19 +336,19 @@ msgid "Messages"
 msgstr "Sporočila"
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:344
+#: code:addons/account_payment_return/models/payment_return.py:394
 #, python-format
 msgid "More than one matches to move reference: %s"
 msgstr ""
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:331
+#: code:addons/account_payment_return/models/payment_return.py:381
 #, python-format
 msgid "Move lines: %s"
 msgstr "Postavke premika: %s"
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:350
+#: code:addons/account_payment_return/models/payment_return.py:400
 #, python-format
 msgid "Move: %s"
 msgstr "Premik: %s"
@@ -387,7 +406,7 @@ msgid "Partner name"
 msgstr "Naziv partnerja"
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:71
+#: code:addons/account_payment_return/models/payment_return.py:90
 #, python-format
 msgid "Payment Line: %s (%s) in Payment Return: %s"
 msgstr "Postavka plačila %s (%s) iz vračila plačila: %s"
@@ -398,7 +417,14 @@ msgid "Payment Reference"
 msgstr "Sklic plačila"
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:94
+#: model:ir.actions.act_window,name:account_payment_return.payment_return_reason_action
+#: model:ir.ui.menu,name:account_payment_return.payment_return_reason_menu
+#, fuzzy
+msgid "Payment Return Reasons"
+msgstr "Razlog vračila plačila"
+
+#. module: account_payment_return
+#: code:addons/account_payment_return/models/payment_return.py:113
 #, fuzzy, python-format
 msgid ""
 "Payment reference must be unique\n"
@@ -420,6 +446,8 @@ msgstr "Postavke vračil plačil"
 
 #. module: account_payment_return
 #: model:ir.model,name:account_payment_return.model_payment_return_reason
+#: model_terms:ir.ui.view,arch_db:account_payment_return.payment_return_reason_form_view
+#: model_terms:ir.ui.view,arch_db:account_payment_return.payment_return_reason_tree_view
 msgid "Payment return reason"
 msgstr "Razlog vračila plačila"
 
@@ -440,6 +468,13 @@ msgid "Reason"
 msgstr "Razlog"
 
 #. module: account_payment_return
+#: model:ir.model.fields,field_description:account_payment_return.field_account_bank_statement_import_journal_creation__return_auto_reconcile
+#: model:ir.model.fields,field_description:account_payment_return.field_account_journal__return_auto_reconcile
+#, fuzzy
+msgid "Reconcile payment returns"
+msgstr "Vračilo plačila"
+
+#. module: account_payment_return
 #: model:ir.model.fields,field_description:account_payment_return.field_payment_return__name
 #: model:ir.model.fields,field_description:account_payment_return.field_payment_return_line__reference
 msgid "Reference"
@@ -456,8 +491,8 @@ msgid "Reference to the created journal entry"
 msgstr "Sklic na ustvarjeni dnevniški vnos"
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:144
-#: code:addons/account_payment_return/models/payment_return.py:373
+#: code:addons/account_payment_return/models/payment_return.py:163
+#: code:addons/account_payment_return/models/payment_return.py:426
 #, python-format
 msgid "Return %s"
 msgstr "Vračilo %s"
@@ -476,7 +511,6 @@ msgstr "Razlog vračila"
 #. module: account_payment_return
 #: model:ir.model.fields,field_description:account_payment_return.field_payment_return_line__reason_additional_information
 #, fuzzy
-#| msgid "Return reason"
 msgid "Return reason (info)"
 msgstr "Razlog vračila"
 
@@ -495,6 +529,11 @@ msgstr "Vrnjeni znesek. Lahko se razlikuje od zneska premika"
 #: model_terms:ir.ui.view,arch_db:account_payment_return.payment_return_search_view
 msgid "State"
 msgstr "Stanje"
+
+#. module: account_payment_return
+#: model_terms:ir.ui.view,arch_db:account_payment_return.payment_return_form_view
+msgid "The payment return could not be automatically reconciled."
+msgstr ""
 
 #. module: account_payment_return
 #: model:ir.model.fields,help:account_payment_return.field_payment_return__date
@@ -538,13 +577,13 @@ msgid "Website communication history"
 msgstr "Sporočila in kronologija komunikacij"
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:125
+#: code:addons/account_payment_return/models/payment_return.py:144
 #, python-format
 msgid "You can not remove a payment return if state is 'Done'"
 msgstr ""
 
 #. module: account_payment_return
-#: code:addons/account_payment_return/models/payment_return.py:168
+#: code:addons/account_payment_return/models/payment_return.py:213
 #, python-format
 msgid "You must input all moves references in the payment return."
 msgstr "V vračilo plačila morate vnesti vse sklice premikov."
