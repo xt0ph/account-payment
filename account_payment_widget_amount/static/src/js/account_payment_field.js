@@ -44,7 +44,7 @@ odoo.define('account_payment_widget_amount.payment', function (require) {
                     },
                     html: true,
                     placement: function() { return $(window).width() <= 1080 ? 'bottom' : 'left'; },
-                    title: 'Enter the payment amount',
+                    title: _t('Enter the payment amount'),
                     trigger: 'click',
                     delay: { "show": 0, "hide": 100 },
                     container: $(k).parent(),
